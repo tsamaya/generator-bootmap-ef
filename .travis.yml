@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-bootmap-ef' ]; then cd .. && eval "mv $currentfolder generator-bootmap-ef" && cd generator-bootmap-ef; fi
+
