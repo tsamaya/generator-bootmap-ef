@@ -21,11 +21,18 @@ describe('bootmap-ef generator', function () {
     var expected = [
       // add files you expect to exist here.
       '.jshintrc',
-      '.editorconfig'
+      '.editorconfig',
+      'index.html',
+      'css/bootstrapmap.css',
+      'css/overrides.css',
+      'js/app.js',
+      'js/bootstrapmap.js'
     ];
 
     helpers.mockPrompt(this.app, {
-      'someOption': true
+      'appName': 'TestApp',
+      'gitHubAccount': 'someuser',
+      'themeStyle': 'light'
     });
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
