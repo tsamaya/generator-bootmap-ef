@@ -1,19 +1,26 @@
 body {
-  padding-top: 50px;
+    padding-top: 50px;
 }
-
-
-
 body > .container {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
-
 table {
-  border-collapse: ;
-  border-spacing: ;
+    border-collapse:;
+    border-spacing:;
 }
-
 .starter-template {
-  padding: 40px 15px;
-  text-align: center;
+    padding: 40px 15px;
+    text-align: center;
+}
+#LocateButton {
+    position: absolute;
+    top: 145px;
+    left: 20px;
+    z-index: 50;
+}
+#HomeButton {
+    position: absolute;
+    top: 125px;
+    left: 20px;
+    z-index: 50;
 }
