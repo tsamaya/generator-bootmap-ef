@@ -27,7 +27,13 @@
          homeButton.startup();
 
          var locateButton = new LocateButton({
-             map: map
+             map: map,
+             useTracking: true,
+             geolocationOptions: {
+                 maximumAge: 0,
+                 timeout: 15000,
+                 enableHighAccuracy: true
+             }
          }, "LocateButton");
          locateButton.startup();
 

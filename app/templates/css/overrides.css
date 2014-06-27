@@ -12,15 +12,15 @@ table {
     padding: 40px 15px;
     text-align: center;
 }
-#LocateButton {
-    position: absolute;
-    top: 145px;
-    left: 20px;
-    z-index: 50;
-}
 #HomeButton {
     position: absolute;
-    top: 125px;
-    left: 20px;
+    top: 130px;
+    left: 16px;
+    z-index: 50;
+}
+#LocateButton {
+    position: absolute;
+    top: 162px;
+    left: 16px;
     z-index: 50;
 }
