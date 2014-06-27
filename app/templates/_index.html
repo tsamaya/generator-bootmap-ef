@@ -13,14 +13,17 @@
         <%= appName %>
     </title>
     <!-- Bootstrap core CSS -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
     <!-- Bootstrap-map-js -->
     <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.9/js/esri/css/esri.css">
     <link rel="stylesheet" type="text/css" href="./css/bootstrapmap.css">
 
+    <!-- Aprise v2 -->
+    <link rel="stylesheet" type="text/css" href="./css/apprise-v2.css">
+
     <!-- Custom styles for this template -->
-    <link href="./css/overrides.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/overrides.css">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -38,7 +41,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="./">
                     <%= appName %>
                 </a>
             </div>
@@ -74,9 +77,7 @@
                             </li>-->
                         </ul>
                     </li>
-                    <li><a href="#about">About</a>
-                    </li>
-                    <li><a href="#contact">Contact</a>
+                    <li><a href="#" id="about">About</a>
                     </li>
                 </ul>
             </div>
@@ -95,6 +96,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="js/apprise-v2.js"></script>
 </body>
 
 </html>
