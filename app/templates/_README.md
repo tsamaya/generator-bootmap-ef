@@ -25,14 +25,14 @@ Additionally, once you have connected your app to a gitbut repo, you can use `gr
 * [ArcGIS Blog](http://blogs.esri.com/esri/arcgis/)
 * [Bootstrap](http://getbootstrap.com/)
 
-## Known Issues
+## Issues
 
-??? Not yet :)
+Find a bug or want to request a new feature? Please let us know by submitting an issue.
 
 ## Contributing to the Generator
 
 Anyone and everyone is welcome to contribute. Original work from [http://github.com/dbouwman/generator-bootmap](http://github.com/dbouwman/generator-bootmap)
-Anyone and everyone is welcome to contribute for this version from esri France [http://github.com/tsamaya/generator-bootmap-ef](http://github.com/tsamaya/generator-bootmap-ef)
+Anyone and everyone is welcome to contribute for this version for Esri France [http://github.com/tsamaya/generator-bootmap-ef](http://github.com/tsamaya/generator-bootmap-ef)
 
 ## Contributing to `<%= _.slugify(appName) %>`
 
