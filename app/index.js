@@ -35,7 +35,18 @@ var BootmapEfGenerator = yeoman.generators.Base.extend({
         }, {
             name: 'themeStyle',
             message: 'Theme style? (dark | light)',
+            choices: ['dark', 'light'],
             default: 'dark'
+        }, {
+            name: 'homeWidget',
+            message: 'Home widget? (yes | no)',
+            choices: ['yes', 'no'],
+            default: 'yes'
+        }, {
+            name: 'locationWidget',
+            message: 'Location widget? (yes | no)',
+            choices: ['yes', 'no'],
+            default: 'yes'
         }];
 
         this.prompt(prompts, function(props) {
@@ -45,22 +56,26 @@ var BootmapEfGenerator = yeoman.generators.Base.extend({
             if (props.themeStyle !== 'dark') {
                 this.navClass = 'navbar-default';
             }
+            this.homeWidget = (props.homeWidget === 'yes');
+            this.locationWidget = (props.locationWidget === 'yes');
             this.gitHubAccount = props.gitHubAccount;
-
             done();
         }.bind(this));
     },
 
+    scaffoldFolders: function() {
+        this.mkdir("js");
+        this.mkdir("css");
+    },
+
     app: function() {
-        //this.mkdir('app');
-        //this.mkdir('app/templates');
+        // NOTE: this is needed b/c _app.js has ES6 style interpolation delimiters
+        // see: https://github.com/lodash/lodash/issues/399
+        this._.templateSettings.interpolate = /<%=([\s\S]+?)%>/g;
 
-        this.copy('_package.json', 'package.json');
-        this.copy('_bower.json', 'bower.json');
-
-        this.copy('_index.html', 'index.html');
-        //this.mkdir('css');
-        //this.mkdir('js');
+        this.template('_README.md', 'README.md');
+        this.template('_index.html', 'index.html');
+        this.template('./js/_app.js', './js/app.js');
     },
 
     projectfiles: function() {
@@ -70,10 +85,14 @@ var BootmapEfGenerator = yeoman.generators.Base.extend({
         this.copy('gitignore', '.gitignore');
         this.copy('gruntfile.js', 'gruntfile.js');
         this.copy('license.txt', 'license.txt');
-        this.template('_README.md', 'README.md');
+
+        this.copy('_package.json', 'package.json');
+        this.copy('_bower.json', 'bower.json');
 
         this.directory('css', 'css');
-        this.directory('js', 'js');
+
+        this.copy('./js/apprise-v2.js', './js/apprise-v2.js');
+        this.copy('./js/bootstrapmap.js', './js/bootstrapmap.js');
     }
 });
 
