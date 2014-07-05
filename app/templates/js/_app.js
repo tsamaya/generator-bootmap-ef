@@ -6,7 +6,7 @@ require([
 <% if (locationWidget) { %>        'esri/dijit/LocateButton',<%}%>
 <% if (homeWidget) {%>        'esri/dijit/HomeButton',<%}%>
 <% if (geocoderWidget) { %>        'esri/dijit/Geocoder',<%}%>
-        'js/bootstrapmap',
+        'app/bootstrapmap',
         'dojo/domReady!'
     ],
     function(Map, Scalebar, WebTiledLayer, ArcGISTiledMapServiceLayer, <% if (locationWidget) { %>LocateButton, <%} if (homeWidget) {%> HomeButton, <%} if (geocoderWidget) { %>Geocoder, <%}%>BootstrapMap) {
