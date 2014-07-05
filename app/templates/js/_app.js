@@ -21,7 +21,7 @@ require([
             map: map,
             scalebarUnit: 'metric'
         });
-        <%if (homeWidget) {%>
+        <% if (homeWidget) {%>
         var homeButton = new HomeButton({
             map: map
         }, 'HomeButton');
@@ -39,7 +39,6 @@ require([
         }, 'LocateButton');
         locateButton.startup();
         <%}%>
-
         <% if (geocoderWidget) { %>
         var geocoder = new Geocoder({
           map: map,
