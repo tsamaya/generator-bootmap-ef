@@ -47,6 +47,11 @@ var BootmapEfGenerator = yeoman.generators.Base.extend({
             message: 'Location widget? (yes | no)',
             choices: ['yes', 'no'],
             default: 'yes'
+        }, {
+            name: 'geocoderWidget',
+            message: 'Geocoder widget? (yes | no)',
+            choices: ['yes', 'no'],
+            default: 'yes'
         }];
 
         this.prompt(prompts, function(props) {
@@ -58,6 +63,7 @@ var BootmapEfGenerator = yeoman.generators.Base.extend({
             }
             this.homeWidget = (props.homeWidget === 'yes');
             this.locationWidget = (props.locationWidget === 'yes');
+            this.geocoderWidget = (props.geocoderWidget === 'yes');
             this.gitHubAccount = props.gitHubAccount;
             done();
         }.bind(this));

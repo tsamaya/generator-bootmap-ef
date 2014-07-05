@@ -3,12 +3,13 @@ require([
         'esri/dijit/Scalebar',
         'esri/layers/WebTiledLayer',
         'esri/layers/ArcGISTiledMapServiceLayer',
-        'esri/dijit/LocateButton',
-        'esri/dijit/HomeButton',
+<% if (locationWidget) { %>        'esri/dijit/LocateButton',<%}%>
+<% if (homeWidget) {%>        'esri/dijit/HomeButton',<%}%>
+<% if (geocoderWidget) { %>        'esri/dijit/Geocoder',<%}%>
         'js/bootstrapmap',
         'dojo/domReady!'
     ],
-    function(Map, Scalebar, WebTiledLayer, ArcGISTiledMapServiceLayer, LocateButton, HomeButton, BootstrapMap) {
+    function(Map, Scalebar, WebTiledLayer, ArcGISTiledMapServiceLayer, <% if (locationWidget) { %>LocateButton, <%} if (homeWidget) {%> HomeButton, <%} if (geocoderWidget) { %>Geocoder, <%}%>BootstrapMap) {
         'use strict';
         // Get a reference to the ArcGIS Map class
         var map = BootstrapMap.create('mapDiv', {
@@ -37,6 +38,14 @@ require([
             }
         }, 'LocateButton');
         locateButton.startup();
+        <%}%>
+
+        <% if (geocoderWidget) { %>
+        var geocoder = new Geocoder({
+          map: map,
+          autoComplete: true
+        }, "search");
+        geocoder.startup();
         <%}%>
 
         var clearBaseMap = function(map) {

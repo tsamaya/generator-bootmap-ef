@@ -24,3 +24,11 @@ table {
     left: 16px;
     z-index: 50;
 }
+#search {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 66px;
+    left: 50px;
+    width: 250px;
+}
