@@ -132,6 +132,7 @@ require([
                     break;
 
                 case 'France Raster v4':
+                    map.setBasemap('gray');
                     l = new ArcGISTiledMapServiceLayer('http://services.opengeodata.fr/arcgis/rest/services/FranceRaster/FranceRaster/MapServer');
                     map.addLayer(l);
                     break;

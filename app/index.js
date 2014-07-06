@@ -98,7 +98,20 @@ var BootmapEfGenerator = yeoman.generators.Base.extend({
         this.directory('css', 'css');
 
         this.copy('./js/apprise-v2.js', './js/apprise-v2.js');
-        this.copy('./js/bootstrapmap.js', './js/bootstrapmap.js');
+        //this.copy('./js/bootstrapmap.js', './js/bootstrapmap.js');
+    },
+
+    bootstrapMapFiles: function() {
+      var cb = this.async();
+      this.remote('Esri', 'bootstrap-map-js', 'master', function (err, remote) {
+        if (err) {
+          return cb(err);
+        }
+        remote.directory('src/css', 'css');
+        remote.directory('src/images', 'images');
+        remote.directory('src/js', 'js');
+        cb();
+      });
     }
 });
 

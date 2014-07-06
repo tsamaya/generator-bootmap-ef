@@ -20,7 +20,7 @@
     "app"
   ],
   "keywords": [
-    "yeoman-generator", "esrijs", "esri", "esri-france"
+    "yeoman-generator", "esrijs", "esri", "esri-france", "bootstrap", "map"
   ],
   "dependencies": {
     "yeoman-generator": "~0.16.0",

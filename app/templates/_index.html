@@ -51,6 +51,11 @@
                     <li class="active dropdown" id="basemapList">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Basemaps <b class="caret"></b></a>
                         <ul class="dropdown-menu" id="myDropdown">
+                            <!--
+                            <li><a href="#">France Raster v4</a>
+                            </li>
+                            <li class="divider"></li>
+                            -->
                             <li><a href="#">Streets</a>
                             </li>
                             <li><a href="#">Imagery</a>
@@ -71,10 +76,6 @@
                             <li class="divider"></li>
                             <li><a href="#">Open Street Map</a>
                             </li>
-                            <!--
-                            <li class="divider"></li>
-                            <li><a href="#">France Raster v4</a>
-                            </li>-->
                         </ul>
                     </li>
                     <li><a href="#" id="about">About</a>
@@ -95,6 +96,9 @@
     <!-- ========================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript">
+    //The location.pathname.replace() is
+    // enabling to load the api from a CDN and load local modules
+    // from the correct location.var
     var dojoConfig = {
         async: true,
         packages: [{
