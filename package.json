@@ -20,11 +20,18 @@
     "app"
   ],
   "keywords": [
-    "yeoman-generator", "esrijs", "esri", "esri-france", "bootstrap", "map"
+    "yeoman-generator",
+    "esrijs",
+    "esri",
+    "esri-france",
+    "bootstrap",
+    "map"
   ],
   "dependencies": {
-    "yeoman-generator": "~0.16.0",
     "chalk": "~0.4.0",
+    "coveralls": "^2.11.1",
+    "mocha-lcov-reporter": "0.0.1",
+    "yeoman-generator": "~0.16.0",
     "yosay": "^0.1.0"
   },
   "devDependencies": {
