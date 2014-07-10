@@ -34,6 +34,7 @@ Finally, initiate the generator:
 ```bash
 $ yo bootmap-ef
 ```
+![](https://raw.githubusercontent.com/tsamaya/generator-bootmap-ef/master/docs/images/yo.jpg)
 
 ### Getting To Know Yeoman
 
@@ -41,9 +42,16 @@ Yeoman has a heart of gold. He's a person with feelings and opinions, but he's v
 
 If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
 
+## Testing It Out
+
+The first thing you need to do is : install the generator on your system. Instead of installing the generator regularly, you can use the *link* command to just link the folder into the path, that way we can continue to make changes here without needing to re-install it every time. From the project directory, simply run 
+```bash
+$ npm link.
+```
+
 ## Credit
 
-This generator was inspired by @dbouwman's [generator-bootmap](https://github.com/dbouwman/generator-bootmap) and @tomwayson updates.
+This generator was inspired by [@dbouwman](https://github.com/dbouwman)'s [generator-bootmap](https://github.com/dbouwman/generator-bootmap) and [@tomwayson](https://github.com/tomwayson/) updates.
 
 ## License
 
